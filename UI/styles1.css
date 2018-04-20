@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  width: 100%;
+ 
+  font-size: 15px;
+}
+/*-----------*/
+/* Homepage */
+/*-----------*/
+
+.homepage {
+  width: 100%;
+
+  background-image: linear-gradient(rgba(0, 0, 51, 0.45), rgba(0, 0, 51, 0.45)), url('https://preview.ibb.co/nCFisk/y5avds_EMo_MZLLYplm_Wb_HN_t_Bm_Rr4r_Pvsg_CFSbq_TQ_1d4tav_Us_QUNqg_w1200_h630_p.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+.homepage-heading {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #F4F4F4;
+  
+}
+.homepage-heading h1 {
+  font-family: 'Rochester', cursive;
+  font-size: 1000%;
+ 
+}
+.homepage-heading h2 {
+  text-transform: uppercase;
+  font-size: 250%;
+  letter-spacing: 10px;
+  word-spacing: 15px;
+}
+
+
+
+/* nav styles */
+.nav-menu{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(100, 19, 83);
+  border : 1px solid
+}
+
+li {
+  float: right
+}
+
+.nav-link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px
+ 
+}
+
+
+li a:hover {
+  background-color:#005f5f
+}
+
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default
+}
+
+/* footer styles */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(100, 19, 83);
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .form-container {
+      width: 100%;
+      margin: 0;
+  }
+}
+
+
+/* styles for food menu options */
+
+ 
+
+*{
+    margin: 0;
+    padding:0;
+  }
+  .cf:before,.cf:after{
+    content: '';  
+    display: table;
+  }
+  .cf:after{
+    clear:both;    
+  }
+  
+  .container{
+    position: relative;
+    margin: 50px auto;
+    max-width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border:1px solid #c5c5c5;
+  }
+  
+  .gallery{
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .image{
+    /* float:left not working in mozilla*/
+    display: inline-block;
+    padding: 2%;
+    background-color: #fff;
+    margin: 3%;
+    width: 18%;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    text-align: center;  
+    border:1px solid #c3c3c3;
+    cursor: pointer;
+  }
+  
+  .image figure{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .image figure img{
+    width: 100%;
+  }
+  
+  figcaption{
+    background-color: rgba(0,0,0,0.8);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+    cursor: pointer;
+    color: slategrey;
+    max-width:100%;
+    font-weight: bold;
+  }
+  
+  figcaption:hover{
+    color: #fff;
+  }
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+   
+    .image {
+        width: 70%;
+        margin: 40px ;
+     
+    }
+}
+
+
+
+
