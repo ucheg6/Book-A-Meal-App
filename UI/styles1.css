@@ -10,9 +10,14 @@ body {
  
   font-size: 15px;
 }
-/*-----------*/
-/* Homepage */
-/*-----------*/
+
+div h2 {
+  text-align : center;
+  margin: 20px
+}
+
+/* Homepage styles */
+
 
 .homepage {
   width: 100%;
@@ -71,6 +76,17 @@ li {
  
 }
 
+.logo{
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  padding: 2em 0.1em;
+  color: #fff;
+  margin: 20px 20px;
+  text-align: center;
+
+}
+
 
 li a:hover {
   background-color:#005f5f
@@ -98,6 +114,14 @@ li a:hover {
   .form-container {
       width: 100%;
       margin: 0;
+  }
+  .homepage-heading h1 {
+    font-family: 'Rochester', cursive;
+    font-size: 500%;
+   
+  }
+  .logo{
+ display: none;
   }
 }
 
@@ -155,7 +179,7 @@ li a:hover {
   }
   
   figcaption{
-    background-color: rgba(0,0,0,0.8);
+    background-color:rgb(100, 19, 83);;
     text-transform: uppercase;
     text-align: center;
     padding: 5px;
