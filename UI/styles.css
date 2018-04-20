@@ -39,6 +39,17 @@ li a:hover {
     color: #444;
     cursor: default
   }
+
+  .logo{
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    padding: 2em 0.1em;
+    color: #fff;
+    margin: 20px 20px;
+    text-align: center;
+  
+  }
   
 /* login form styles */
 
@@ -54,6 +65,8 @@ form {
   }
   button {
     padding:10px;
+   
+
     
   }
   label {
@@ -84,8 +97,15 @@ form {
     margin-top: 100px;
     border-radius: 10px;
     -moz-border-radius: 10px;
-    -webkit-border-radius: 10px
+    -webkit-border-radius: 10px;
+    text-align: center;
 }
+
+.form-container a {
+ float:left;
+ margin-top: 15px;
+}
+
 
 form a {
     text-decoration: none;
@@ -115,4 +135,7 @@ form h2 {
       width: 100%;
       margin: 0;
   }
+  .logo{
+    display: none;
+     }
 }

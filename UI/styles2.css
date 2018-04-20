@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(150, 187, 194)
+   
 }
 /* nav styles */
 .nav-menu{
@@ -9,11 +9,15 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333
-}
-
-
-.nav-link {
+    background-color: rgb(100, 19, 83);
+    border : 1px solid
+  }
+  
+  li {
+    float: right
+  }
+  
+  .nav-link {
     display: block;
     color: white;
     text-align: center;
@@ -23,15 +27,30 @@ body {
     font-size: 1.2em;
     line-height: 40px
    
-}
-
-
-
-.nav a.active {
+  }
+  
+  .logo{
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    padding: 2em 0.1em;
+    color: #fff;
+    margin: 20px 20px;
+    text-align: center;
+  
+  }
+  
+  
+  li a:hover {
+    background-color:#005f5f
+  }
+  
+  .nav a.active {
     background-color: #fff;
     color: #444;
     cursor: default
   }
+  
 /* footer styles */
 
 .footer {
@@ -39,7 +58,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #333;
+    background-color: rgb(100, 19, 83);
     color: white;
     text-align: center;
   }
@@ -150,6 +169,9 @@ input[type=button] {
         width: 100%;
         margin: 0 ;
     }
+    .logo{
+        display: none;
+         }
 }
 
 /*Table styles */
@@ -166,7 +188,7 @@ tr:nth-of-type(odd) {
 	}
 
 th { 
-	background: #3498db; 
+	background: rgb(100, 19, 83); 
 	color: white; 
 	font-weight: bold; 
 	}
