@@ -97,8 +97,15 @@ form {
     margin-top: 100px;
     border-radius: 10px;
     -moz-border-radius: 10px;
-    -webkit-border-radius: 10px
+    -webkit-border-radius: 10px;
+    text-align: center;
 }
+
+.form-container a {
+ float:left;
+ margin-top: 15px;
+}
+
 
 form a {
     text-decoration: none;

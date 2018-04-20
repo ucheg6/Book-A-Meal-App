@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(150, 187, 194)
+   
 }
 /* nav styles */
 .nav-menu{
@@ -188,7 +188,7 @@ tr:nth-of-type(odd) {
 	}
 
 th { 
-	background: #3498db; 
+	background: rgb(100, 19, 83); 
 	color: white; 
 	font-weight: bold; 
 	}
