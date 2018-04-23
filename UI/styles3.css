@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+  
+}
+
+/* nav styles */
+.nav-menu{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(100, 19, 83);
+  border : 1px solid
+}
+
+li {
+  float: right
+}
+
+.nav-link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px
+ 
+}
+
+.logo{
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  padding: 2em 0.1em;
+  color: #fff;
+  margin: 20px 20px;
+  text-align: center;
+
+}
+
+
+li a:hover {
+  background-color:#005f5f
+}
+
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default
+}
+/* footer styles */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(100, 19, 83);
+  color: white;
+  text-align: center;
+}
+  
+  section h2 {
+    text-align : center;
+    margin: 20px
+}
+
+section h3 {
+   
+    margin: 30px 150px
+}
+
+
+ /* styles for food menu options */
+
+ 
+
+*{
+    margin: 0;
+    padding:0;
+  }
+  .cf:before,.cf:after{
+    content: '';  
+    display: table;
+  }
+  .cf:after{
+    clear:both;    
+  }
+  h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    color:#444;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .container{
+    position: relative;
+    margin: 50px auto;
+    max-width: 80%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border:1px solid #c5c5c5;
+  }
+  
+  .gallery{
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .image{
+    /* float:left not working in mozilla*/
+    display: inline-block;
+    padding: 2%;
+    background-color: #fff;
+    margin: 1%;
+    width: 18%;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    text-align: center;  
+    border:1px solid #c3c3c3;
+    cursor: pointer;
+  }
+  
+  .image figure{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .image figure img{
+    width: 100%;
+  }
+  
+  figcaption{
+    background-color:rgb(100, 19, 83);;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+    cursor: pointer;
+    color: slategrey;
+    max-width:100%;
+    font-weight: bold;
+  }
+  
+  figcaption:hover{
+    color: #fff;
+  }
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+   
+    .image {
+        width: 70%;
+        margin: 40px ;
+     
+    }
+    .logo{
+      display: none;
+       }
+}
