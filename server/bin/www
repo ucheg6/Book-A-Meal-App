@@ -1,0 +1,19 @@
+const app = require('../app');
+const dotenv = require('dotenv');
+
+const http = require('http');
+
+dotenv.config();
+
+const port = process.env.PORT || '3000';
+
+app.set('port', port);
+
+const server = http.createServer(app);
+server.listen(port, (err) =>{
+  if (err) {
+      console.log(err);
+  }else {
+      console.log("Server started on port : " + port);
+  }
+});
