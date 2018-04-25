@@ -7,6 +7,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const validator = require('express-validator');
 
+const api = require("./routes/index");
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(validator());
 
+app.use("/api/v1", api);
 
 
 

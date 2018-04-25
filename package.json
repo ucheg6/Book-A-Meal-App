@@ -4,6 +4,7 @@
   "description": "Book-A-Meal is an application that allows customers to make food orders and helps the food",
   "main": "index.js",
   "scripts": {
+    "start":"SET NODE_ENV = development & nodemon ./server/bin/www --watch ./server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
