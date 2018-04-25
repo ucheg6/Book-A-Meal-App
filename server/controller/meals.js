@@ -5,7 +5,7 @@ class Meal {
 
     getAllMeals(request, response){
         let meals = db.meals;
-        console.log('am here');
+      
      response.json({
          meals: meals
      });
@@ -40,6 +40,7 @@ class Meal {
         const mealId = Number(request.params.mealId);
 
         meals.filter((meal)=>{
+
            if(meal.id !== mealId){
             // response.json({message:'not found'});
                return false
@@ -57,7 +58,26 @@ class Meal {
 
     }
 
+    deleteMeal(request, response){
+        let meals = db.meals;
+        const mealId = Number(request.params.mealId);
+
+        meals.filter((meal)=>{
+            if(meal.id !== mealId){
+              // response.json({message:'not found'});
+              return false
+            }else{
+                const index = meals.indexOf(meal);
+                meals.splice(index, 1);
+                response.json({meals});
+                //return true
+            }
+        });
+
+     
+    }
+
 }
 const meals = new Meal();
 
-module.exports = meals
+export default meals;

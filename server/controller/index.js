@@ -1,6 +1,9 @@
-//import meal from "./meals";
-const meal = require('./meals');
+import meal from "./meals";
 
-module.exports = {
-    meal
+import menu from "./menus";
+
+// const meal = require('./meals');
+
+export {
+  meal, menu
 }
