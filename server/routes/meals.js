@@ -16,6 +16,6 @@ router.put('/meals/:mealId/update', meal.updateMeal);
 
 router.delete('/meals/:mealId/delete', meal.deleteMeal);
 
- export default router;
+export default router;
 
-//module.exports = router;
+

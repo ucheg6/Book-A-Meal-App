@@ -1,9 +1,10 @@
-import meal from "./meals";
+import meal from './meals';
 
-import menu from "./menus";
+import menu from './menus';
 
-// const meal = require('./meals');
+import order from './orders';
 
-export {
-  meal, menu
-}
+export { meal, menu, order };
+
+
+ 
