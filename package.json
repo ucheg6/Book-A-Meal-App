@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "SET NODE_ENV = development & nodemon ./server/bin/www --watch ./server --exec babel-node --presets es2015,stage-2",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "test": " jshint hello.js && mocha --compilers js:babel-core/register  --timeout 5000",
     "transpile-es2015": "babel src -d lib"
   },
