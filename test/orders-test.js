@@ -1,4 +1,4 @@
-import { meal } from '../server/controller/index';
+import { order } from '../server/controller/index';
 
 const db = require('../server/model/db');
 
@@ -14,18 +14,18 @@ const expect = require('chai').expect;
 
 chai.use(require('chai-http'));
 
-describe('meals', () => {
+describe('orders', () => {
 
 
   /* Test the /GET route */
-  describe('API endpoint /meals', () => {
-    it('should return all meals', () => chai.request(server)
-      .get('/api/v1/book-a-meal/meals')
+  describe('API endpoint /orders', () => {
+    it('should return all food orders', () => chai.request(server)
+      .get('/api/v1/book-a-meal/orders')
       .then((res) => {
         expect(res).to.have.status(200);
         expect(res).to.be.json;
         expect(res.body).to.be.an('object');
-        expect(res.body.meals).to.be.an('array');
+        expect(res.body.orders).to.be.an('array');
       }));
 
   });
@@ -44,17 +44,19 @@ describe('meals', () => {
   /*
   * Test the /POST route
   */
-  describe('POST /meals', () => {
-    it('it should  POST a meal ', (done) => {
+  describe('POST /orders', () => {
+    it('it should  POST an order', (done) => {
       const meals = {
         id: 5,
-        title: 'Yamarita',
-        description: 'deli',
-        price: 1700,
-        imageUrl: 'https://ibravoh.com/fs.jpg',
+        customer: 'Uche Akogwu',
+        mealId: 2,
+        quantity: '2 packs',
+        amount: 5000,
+        date: '10-4-2018',
+        time: '3:30am',
       };
       chai.request(server)
-        .post('/api/v1/book-a-meal/meal/new')
+        .post('/api/v1/book-a-meal/order/new')
         .send(meals)
         .end((err, res) => {
           expect(res).to.have.status(201);
@@ -69,8 +71,8 @@ describe('meals', () => {
   // Testing how to update a task expecting status 201 of success
   it('should add a new item on put', (done) => {
     chai.request(server)
-      .put('/api/v1/book-a-meal/meals/1/update')
-      .send({ title: 'Yam' })
+      .put('/api/v1/book-a-meal/orders/3/update')
+      .send({ quantity: '10 packs' })
       .end((err, res) => {
         expect(res).to.have.status(200);
         expect(res.body).to.be.an('object');
@@ -79,14 +81,7 @@ describe('meals', () => {
       });
   });
 
-  it('should delete an item on delete', (done) => {
-    chai.request(server)
-      .delete('/api/v1/book-a-meal/meals/3/delete')
-      .end((err, res) => {
-        expect(res).to.have.status(200);
-        done();
-      });
-  });
+ 
 
 
 });
