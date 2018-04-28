@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "SET NODE_ENV = development & nodemon ./server/bin/www --watch ./server --exec babel-node --presets es2015,stage-2",
-    "test": " mocha --compilers js:babel-core/register --timeout 5000",
+    "test": " jshint hello.js && mocha --compilers js:babel-core/register  --timeout 5000",
     "transpile-es2015": "babel src -d lib"
   },
   "repository": {
@@ -99,6 +99,7 @@
     "fetch-mock": "^6.0.0",
     "jest": "^22.1.4",
     "jsdoc": "^3.5.5",
+    "jshint": "^2.9.5",
     "moxios": "^0.4.0",
     "nodemon": "^1.17.3",
     "react-test-renderer": "^16.2.0",
@@ -107,4 +108,7 @@
     "selenium-standalone": "^6.12.0",
     "should": "^13.2.1"
   }
+  
 }
+
+
