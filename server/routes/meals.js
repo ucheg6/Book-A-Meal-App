@@ -1,10 +1,8 @@
 import express from 'express';
+// const express = require('express');
 
 import { meal } from '../controller';
 
-// const express= require('express');
-
-// const meal= require('../controller/index').meal;
 
 const router = express.Router();
 

@@ -79,3 +79,7 @@ class Meal {
 const meals = new Meal();
 
 export default meals;
+
+
+
+
