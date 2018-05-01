@@ -13,6 +13,8 @@ Book-A-Meal is an application that allows customers to make food orders and help
 
 git clone https://github.com/ucheg6/book-a-meal-app.git
 
+#View UI => https://ucheg6.github.io/Book-A-Meal-App/UI/LandingPage.html
+
 For navigating through the github pages, simply click on the signup or signin button on either of the form to go to the user dashbaord
 
    
