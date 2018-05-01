@@ -8,14 +8,14 @@ Book-A-Meal is an application that allows customers to make food orders and help
 
 #How to clone this repository
 
-    Navigate to a directory using your favourite CLI(command line interface)
+    Navigate to a directory using your CLI(command line interface)
     Clone this repository on that directory using
 
 git clone https://github.com/ucheg6/book-a-meal-app.git
 
 #View UI => https://ucheg6.github.io/Book-A-Meal-App/UI/LandingPage.html
 
-For navigating through the github pages, simply click on the signup or signin button on either of the form to go to the user dashbaord
+For navigating through the github pages, simply click on the Login button on  the form to go to the user/caterer dashbaord
 
    
 
