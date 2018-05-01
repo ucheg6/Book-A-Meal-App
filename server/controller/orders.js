@@ -43,7 +43,7 @@ class Order {
         order.quantity = request.body.quantity ||  order.quantity;
         order.amount= Number(request.body.amount) ||  order.amount;
         order.date = request.body.date || order.date;
-        order.time = request.body.mealId || order.time
+        order.time = request.body.mealId || order.time;
 
         response.json({orders});
         return true
