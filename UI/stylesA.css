@@ -126,7 +126,7 @@ Navbar__Link-brand {
       border:1px solid #CCC
     }
     button {
-      padding:10px ;
+      padding:5px 5px;
       margin:10px 4px;
       background:#f79090;
      
@@ -177,7 +177,7 @@ Navbar__Link-brand {
   form a {
       text-decoration: none;
       color:black;
-     margin:15px 40px;
+     margin:10px 20px;
   }
   
   .form-button{
