@@ -6,33 +6,40 @@
     <meta charset="UTF-8">
     <title> Book A Meal App</title>
     <link href="styles2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
 </head>
 
 <body>
-    <nav class="nav">
-        <ul class="nav-menu ">
-                <a href="#" class="logo ">Book-A-Meal®</a>
-                         
-                <li>
-                    <a class="nav-link" href="LandingPage.html">Home</a>
-                </li>
-                <li>
-                        <a class="nav-link active" href="CatererManager.html">Dashboard</a>
-                    </li> 
-                <li>
-                    <a class="nav-link  " href="OrderHistory.html">Orders</a>
-                </li>
-                <li>
-                    <a class="nav-link " href="MenuOptions.html">Today's Menu</a>
-                </li>
-                <li>
-                        <a class="nav-link " href="SetMenu.html">Set-Menu</a>
-               </li>
+    <div class="Navbar">
+        <div class="wrap  Navbar__Link Navbar__Link-brand ">
+                <a href="#" id="logoo">Book-A-Meal®</a>
+         </div>
+         <div class="Navbar__Link Navbar__Link-toggle">
+           <i class="fas fa-bars"></i>
+         </div>
+       <nav class="Navbar__Items">
+         <div class="Navbar__Link">
+            <a class="nav-link" href="LandingPage.html">Home</a>
+         </div>
+         <div class="Navbar__Link">
+            <a class="nav-link active" href="CatererManager.html">Dashboard</a>
+         </div>
+        
+         <div class="Navbar__Link">
+            <a class="nav-link " href="MenuOptions.html">Menu</a>
+     </div>
+     <div class="Navbar__Link">
+        <a class="nav-link " href="SetMenu.html">Set-Menu</a>
+     </div>
+     <div class="Navbar__Link">
+        <a class="nav-link  " href="OrderHistory.html">Orders</a>
+     </div>
 
-            
-
-        </ul>
-    </nav>
+     </nav>
+ </div>
+      
+      
+     </div>
     <section>
         <div class="container">
             <h1>
@@ -41,7 +48,7 @@
             <form action="/action_page.php">
                 <div class="row">
                     <div class="col-25">
-                        <label for="foodname">Food Name:</label>
+                        <label for="foodtitle">Food Title:</label>
                     </div>
                     <div class="col-75">
                         <input type="text" id="foodname" name="foodname" placeholder="Food Name..">
@@ -100,8 +107,8 @@
                         <td data-column="Food Price">₦5000</td>
                         <td data-column="Actions">
                             <span>
-                                <input type="button" style=" background-color:blue" value="Edit">&nbsp;
-                                <input type="button" style=" background-color:red" value="Delete">
+                                <input type="button" style=" background-color:rgb(2, 167, 196)" value="Edit">&nbsp;
+                                <input type="button" style=" background-color:rgb(247, 144, 144)" value="Delete">
                             </span>
                         </td>
                         <td data-column="Food Code">EF001 </td>
@@ -113,8 +120,8 @@
                         <td data-column="Food Price">₦5000</td>
                         <td data-column="Actions">
                             <span>
-                                <input type="button" style=" background-color:blue" value="Edit">&nbsp;
-                                <input type="button" style=" background-color:red" value="Delete">
+                                <input type="button" style=" background-color:rgb(15, 196, 228)" value="Edit">&nbsp;
+                                <input type="button" style=" background-color:rgb(247, 144, 144)" value="Delete">
                             </span>
                         </td>
                         <td data-column="Food Code">EF001 </td>
@@ -124,8 +131,8 @@
                         <td data-column="Food Price">₦5000</td>
                         <td data-column="Actions">
                             <span>
-                                <input type="button" style=" background-color:blue" value="Edit">&nbsp;
-                                <input type="button" style=" background-color:red" value="Delete">
+                                <input type="button" style=" background-color:rgb(15, 196, 228)" value="Edit">&nbsp;
+                                <input type="button" style=" background-color:rgb(247, 144, 144)" value="Delete">
                             </span>
                         </td>
                         <td data-column="Food Code">EF001 </td>
@@ -135,8 +142,8 @@
                         <td data-column="Food Price">₦5000</td>
                         <td data-column="Actions">
                             <span>
-                                <input type="button" style=" background-color:blue" value="Edit">&nbsp;
-                                <input type="button" style=" background-color:red" value="Delete">
+                                <input type="button" style=" background-color:rgb(15, 196, 228)" value="Edit">&nbsp;
+                                <input type="button" style=" background-color:rgb(247, 144, 144)" value="Delete">
                             </span>
                         </td>
                         <td data-column="Food Code">EF001 </td>
@@ -146,8 +153,8 @@
                         <td data-column="Food Price">₦5000</td>
                         <td data-column="Actions">
                             <span>
-                                <input type="button" style=" background-color:blue" value="Edit">&nbsp;
-                                <input type="button" style=" background-color:red" value="Delete">
+                                <input type="button" style=" background-color:rgb(15, 196, 228)" value="Edit">&nbsp;
+                                <input type="button" style=" background-color:rgb(247, 144, 144)" value="Delete">
                             </span>
                         </td>
                         <td data-column="Food Code">EF001 </td>
@@ -157,11 +164,12 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer">
-            <p>Book A Meal App © 2018 </p>
-        </div>
-    </footer>
+    <footer class="footer">
+
+            <p>Designed by Uche Akogwu © 2018 </p>
+    
+        </footer>
+        <script src="script.js"></script>
 </body>
 
 </html>

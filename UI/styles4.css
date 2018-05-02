@@ -4,51 +4,94 @@ body {
 
 }
 /* nav styles */
-.nav-menu{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+.Navbar {
     background-color: rgb(100, 19, 83);
-    border : 1px solid
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-family: sans-serif;
+    color: white;
+  }
+  .wrap {
+    display: flex;
+    font-size: 20px;
+    width: 30%;
+    justify-content: space-between;
+  }
+  .nav-link:hover {
+    background-color: #f79090;
   }
   
-  li {
-    float: right
+  .nav-link.active {
+    background-color: #fff;
+    color: #444;
+    cursor: default
   }
+  .Navbar__Link {
+    padding-right: 8px;
+    
+  }
+  Navbar__Link-brand {
+    margin-right: 40px;
+    
+  }
+  .Navbar__Items {
+    display: flex;
+    
+  }
+  .Navbar__Items--right {
+    margin-left:auto;
+  }
+  .Navbar__Link-toggle {
+    display: none;
+  }
+  @media only screen and (max-width: 768px) {
+    .Navbar__Items,
+    .Navbar {
+      flex-direction: column;
+    }
+    .wrap {
+      display: flex;
+      justify-content:center;
+      width: 50%
+    }
+  .Navbar__Items {
+      display:none;
+    }
+  .Navbar__Items--right {
+      margin-left: auto;
+    }
+  .Navbar__ToggleShow {
+      display: flex;
+    }
+  .Navbar__Link-toggle {
+      align-self: flex-end;
+      display: initial;
+      position: absolute;
+      cursor: pointer;
+     } 
+  }
+  
+  
   
   .nav-link {
-    display: block;
+    /* display: block; */
     color: white;
     text-align: center;
+    
     padding: 14px 16px;
     text-decoration: none;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Rochester', cursive;
     font-size: 1.2em;
     line-height: 40px
    
   }
   
-  .logo{
-    font-size: 22px;
-    text-align: center;
+  
+  #logoo{
+    color: #f790c9;
     text-decoration: none;
-    padding: 2em 0.1em;
-    color: #fff;
-    margin: 20px 20px;
-    text-align: center;
-  
-  }
-  
-  
-  li a:hover {
-    background-color:#005f5f
-  }
-  
-  .nav a.active {
-    background-color: #fff;
-    color: #444;
-    cursor: default
   }
   /* footer styles */
   
@@ -56,11 +99,19 @@ body {
     position: fixed;
     left: 0;
     bottom: 0;
+   
     width: 100%;
-    background-color: rgb(100, 19, 83);
+    height: 50px;
+    background-color:  rgb(100, 19, 83);
     color: white;
     text-align: center;
   }
+  
+  .footer p {
+  
+    margin: 20px 0 8px;
+    
+    }
   
   @media screen and (max-width: 600px) {
     .form-container {
@@ -77,6 +128,8 @@ body {
 section h1 {
     text-align : center;
 }
+/*Table styles */
+
 table { 
 	width: 750px; 
 	border-collapse: collapse; 
@@ -95,12 +148,22 @@ th {
 	}
 
 td, th { 
-	padding: 10px; 
+	padding: 10px 30px; 
 	border: 1px solid #ccc; 
-	text-align: left; 
+	/* text-align: left;  */
 	font-size: 18px;
-	}
-
+    }
+    
+    .floating-box {
+        display: inline-block;
+        width: 250px;
+        height: 75px;
+        margin-left: 250px;;
+       text-align: center;
+        padding: 10px;
+        border: 5px solid  rgb(100, 19, 83); 
+        border-radius: 2px 
+    }
 /* 
 Max width before this PARTICULAR table gets nasty
 This query will take effect for any screen smaller than 760px
@@ -111,7 +174,7 @@ only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
 	table { 
-	  	width: 100%; 
+	  	width: 80%; 
 	}
 
 	/* Force table to not be like tables anymore */
@@ -177,57 +240,11 @@ input[type=submit] {
        
         margin-left: 110px
     }
-}
-/* Modal styles */
 
-.modalDialog {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog > div {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-}
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-    background: #00d9ff;
+    .floating-box {
+      
+        width: 70%;
+       margin: 10px 40px;
+       
+    }
 }

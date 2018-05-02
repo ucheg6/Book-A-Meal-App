@@ -5,51 +5,94 @@ body {
 }
 
 /* nav styles */
-.nav-menu{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.Navbar {
   background-color: rgb(100, 19, 83);
-  border : 1px solid
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-family: sans-serif;
+  color: white;
+}
+.wrap {
+  display: flex;
+  font-size: 20px;
+  width: 30%;
+  justify-content: space-between;
+}
+.nav-link:hover {
+  background-color: #f79090;
 }
 
-li {
-  float: right
+.nav-link.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default
 }
+.Navbar__Link {
+  padding-right: 8px;
+  
+}
+Navbar__Link-brand {
+  margin-right: 40px;
+  
+}
+.Navbar__Items {
+  display: flex;
+  
+}
+.Navbar__Items--right {
+  margin-left:auto;
+}
+.Navbar__Link-toggle {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .Navbar__Items,
+  .Navbar {
+    flex-direction: column;
+  }
+  .wrap {
+    display: flex;
+    justify-content:center;
+    width: 50%
+  }
+.Navbar__Items {
+    display:none;
+  }
+.Navbar__Items--right {
+    margin-left: auto;
+  }
+.Navbar__ToggleShow {
+    display: flex;
+  }
+.Navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+   } 
+}
+
+
 
 .nav-link {
-  display: block;
+  /* display: block; */
   color: white;
   text-align: center;
+  
   padding: 14px 16px;
   text-decoration: none;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Rochester', cursive;
   font-size: 1.2em;
   line-height: 40px
  
 }
 
-.logo{
-  font-size: 22px;
-  text-align: center;
+
+#logoo{
+  color: #f790c9;
   text-decoration: none;
-  padding: 2em 0.1em;
-  color: #fff;
-  margin: 20px 20px;
-  text-align: center;
-
-}
-
-
-li a:hover {
-  background-color:#005f5f
-}
-
-.nav a.active {
-  background-color: #fff;
-  color: #444;
-  cursor: default
 }
 /* footer styles */
 
@@ -57,11 +100,19 @@ li a:hover {
   position: fixed;
   left: 0;
   bottom: 0;
+ 
   width: 100%;
-  background-color: rgb(100, 19, 83);
+  height: 50px;
+  background-color:  rgb(100, 19, 83);
   color: white;
   text-align: center;
 }
+
+.footer p {
+
+  margin: 20px 0 8px;
+  
+  }
   
   section h2 {
     text-align : center;
@@ -101,6 +152,7 @@ section h3 {
   .container{
     position: relative;
     margin: 50px auto;
+    margin-bottom: 100px;
     max-width: 80%;
     background-color: #f1f1f1;
     padding: 10px;

@@ -3,53 +3,97 @@ body {
     padding: 0;
    
 }
-/* nav styles */
-.nav-menu{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+ /* nav styles */
+.Navbar {
     background-color: rgb(100, 19, 83);
-    border : 1px solid
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-family: sans-serif;
+    color: white;
+  }
+  .wrap {
+    display: flex;
+    font-size: 20px;
+    width: 30%;
+    justify-content: space-between;
+  }
+  .nav-link:hover {
+    background-color: #f79090;
   }
   
-  li {
-    float: right
+  .nav-link.active {
+    background-color: #fff;
+    color: #444;
+    cursor: default
   }
+  .Navbar__Link {
+    padding-right: 8px;
+    
+  }
+  Navbar__Link-brand {
+    margin-right: 40px;
+    
+  }
+  .Navbar__Items {
+    display: flex;
+    
+  }
+  .Navbar__Items--right {
+    margin-left:auto;
+  }
+  .Navbar__Link-toggle {
+    display: none;
+  }
+  @media only screen and (max-width: 768px) {
+    .Navbar__Items,
+    .Navbar {
+      flex-direction: column;
+    }
+    .wrap {
+      display: flex;
+      justify-content:center;
+      width: 50%
+    }
+  .Navbar__Items {
+      display:none;
+    }
+  .Navbar__Items--right {
+      margin-left: auto;
+    }
+  .Navbar__ToggleShow {
+      display: flex;
+    }
+  .Navbar__Link-toggle {
+      align-self: flex-end;
+      display: initial;
+      position: absolute;
+      cursor: pointer;
+     } 
+  }
+  
+  
   
   .nav-link {
-    display: block;
+    /* display: block; */
     color: white;
     text-align: center;
+    
     padding: 14px 16px;
     text-decoration: none;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Rochester', cursive;
     font-size: 1.2em;
     line-height: 40px
    
   }
   
-  .logo{
-    font-size: 22px;
-    text-align: center;
+  
+  #logoo{
+    color: #f790c9;
     text-decoration: none;
-    padding: 2em 0.1em;
-    color: #fff;
-    margin: 20px 20px;
-    text-align: center;
-  
   }
   
-  
-  li a:hover {
-    background-color:#005f5f
-  }
-  
-  .nav a.active {
-    background-color: #fff;
-    color: #444;
-    cursor: default
-  }
   
 /* footer styles */
 
@@ -93,8 +137,8 @@ input[type=number], select, textarea {
     resize: vertical;
 }
 input[type=file], select, textarea {
-    
-    padding: 12px;
+    width: 35%;
+    padding: 5px 5px;
     margin-bottom:20px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -108,7 +152,7 @@ label {
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: rgb(2, 167, 196);
     color: white;
     padding: 12px 20px;
     margin-left: 332px;
@@ -119,28 +163,32 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #f79090;
 }
 
 input[type=button] {
     border-radius: 5px;
+    margin: 10px 10px;
+    padding: 10px 20px
 }
 
 .container {
     border-radius: 5px;
     background-color: #f2f2f2;
-    padding: 20px;
+    padding: 20px 150px;
+   
 }
 
 .col-25 {
     float: left;
-    width: 25%;
+    width: 45%;
     margin-top: 6px;
+    margin-right: -150px;
 }
 
 .col-75 {
     float: left;
-    width: 75%;
+    width: 55%;
     margin-top: 6px;
 }
 
@@ -155,11 +203,22 @@ input[type=button] {
 @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
         width: 100%;
-        margin-top: 0;
+        margin: 0;
+        
+    }
+    
+    .col-25, .col-75, input[type=text], select, textarea {
+        width: 100%;
+        margin: 0;
+        padding: -20px
+    }
+    .col-25, .col-75, input[type=number], select, textarea {
+        width: 100%;
+        margin: 0;
     }
     .col-25, .col-75, input[type=file] {
         width: 100%;
-        margin-top: 0;
+        margin: 0;
     }
 
     label {
@@ -168,6 +227,7 @@ input[type=button] {
     input[type=submit] {
         width: 100%;
         margin: 0 ;
+        margin-top: 20px
     }
     .logo{
         display: none;
@@ -177,7 +237,7 @@ input[type=button] {
 /*Table styles */
 
 table { 
-	width: 750px; 
+	width: 900px; 
 	border-collapse: collapse; 
 	margin:50px auto;
 	}
@@ -194,9 +254,9 @@ th {
 	}
 
 td, th { 
-	padding: 10px; 
+	padding: 20px 30px; 
 	border: 1px solid #ccc; 
-	text-align: left; 
+	/* text-align: left;  */
 	font-size: 18px;
 	}
 
@@ -210,7 +270,7 @@ only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
 	table { 
-	  	width: 100%; 
+	  	width: 70%; 
 	}
 
 	/* Force table to not be like tables anymore */
