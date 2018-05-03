@@ -4,7 +4,7 @@
   "description": "Book-A-Meal is an application that allows customers to make food orders and helps the food",
   "main": "index.js",
   "scripts": {
-    "start": "SET NODE_ENV = development & nodemon ./server/bin/www --watch ./server --exec babel-node --presets es2015,stage-2",
+    "start": "nodemon ./server/bin/www --watch ./server --exec babel-node --presets es2015,stage-2",
     "test": " set NODE_ENV=test && nyc --reporter=html --reporter=text mocha --compilers js:babel-core/register ./test  --timeout 5000",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "transpile-es2015": "babel src -d lib"
@@ -64,8 +64,10 @@
     "node-sass": "^4.7.2",
     "npm": "^5.8.0",
     "nyc": "^11.3.0",
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
     "prop-types": "^15.6.0",
-    "sequelize": "^4.13.2",
+    "sequelize": "^4.37.6",
     "sequelize-cli": "^3.0.0",
     "serve-favicon": "~2.3.2",
     "shortid": "^2.2.8",
