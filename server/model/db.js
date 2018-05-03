@@ -105,6 +105,50 @@ const db = {
     },
   ],
 
+  users :[
+    { id: 1,
+      fullName:'Dikaeinstein Okwa',
+      userName: 'Dikaeinstein ',
+    email: 'dikaeinstein@gmail.com',
+      password: 5000,
+      role: 'caterer',
+
+  },
+  { id: 2,
+    fullName:'Uche Akogwu',
+    userName: 'uche',
+    email: 'ucheakogwu@gmail.com',
+    password: 7000,
+    role: 'user',
+
+},
+{ id: 3,
+  fullName:'Ginika Akogwu',
+  userName: 'ginika',
+  email: 'ucheakogwu@gmail.com',
+  password: 7000,
+  role: 'user',
+
+},
+
+{ id: 3,
+  fullName:'Chuks Nzenwata',
+  userName: 'chuks',
+  email: 'chukwudi@gmail.com',
+  password: 4000,
+  role: 'caterer',
+
+},
+{ id: 4,
+  fullName:'odogwu Angel',
+  userName: 'odogwu',
+  email: 'odogwuawka@gmail.com',
+  password: 89,
+  role: 'user',
+
+},
+],
+
 
 };
 
