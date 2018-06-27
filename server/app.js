@@ -2,10 +2,6 @@ import express from 'express';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
 import validator from 'express-validator';
-// const express = require('express');
-// const logger = require('morgan');
-// const bodyParser = require('body-parser');
-// const validator = require('express-validator');
 
 
 const api = require('./routes/index');
@@ -20,6 +16,12 @@ app.use(validator());
 app.use('/api/v1', api);
 
 
+app.get('*', (req, res) => res.status(200).send({
+    message: 'Welcome to the Book-A-Meal-App.',
+}));
 
 
-module.exports = app;
+
+
+
+module.exports = app;   
