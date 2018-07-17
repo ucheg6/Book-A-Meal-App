@@ -85,10 +85,10 @@ class MealController {
    static async updateMeal(req, res) {
        const error = {};
        const matchedMeal = await Meals.findOne({
-           where: { id: req.params.mealid },
+           where: { id: Number(req.params.mealId) },
        });
        if(!matchedMeal) {
-           error.id = 'Meal id does not exist!';
+        //    error.id = 'Meal id does not exist!';
            return res.status(404).json({
                mesage: error.id,
                status: 'error',
@@ -105,7 +105,8 @@ class MealController {
            });
 
        } catch (err) {
-           error.title = err.errors[0].message;
+           console.log(err);
+            error.title = err.errors[0].message;
            return res.status(409).json({
                message: 'You cannot update meal name to an existing meal name',
                status: 'error',
@@ -114,6 +115,11 @@ class MealController {
            });
 
        }
+
+    
+
+   
+
    }
 
    static async deleteMeal(req, res) {

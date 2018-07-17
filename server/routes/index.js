@@ -1,8 +1,9 @@
 import express from 'express';
 import MealController from './meals';
+import UserController from './users';
 // import menu from './menus'; 
 // import order from './orders';
-// import user from './users';
+
 
 
 
@@ -15,7 +16,7 @@ router.get('/api', (req, res) => res.status(200).send({
 router.use('/book-a-meal', MealController);
 // router.use('/book-a-meal', menu);
 // router.use('/book-a-meal', order);
-// router.use('/book-a-meal', user);
+router.use('/book-a-meal', UserController);
 
   
 module.exports = router;
