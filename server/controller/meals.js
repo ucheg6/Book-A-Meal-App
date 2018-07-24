@@ -3,6 +3,7 @@ import {Meals} from '../models';
 
 class MealController {
   static async getAllMeals(req, res) {
+      
       const meals = await Meals.findAll();
       if(meals.length === 0) {
           return res.status(404).json({

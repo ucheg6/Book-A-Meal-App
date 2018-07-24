@@ -1,4 +1,10 @@
+import jwt from 'jsonwebtoken';
+import * as dotenv from 'dotenv';
 import { Users } from '../models';
+
+dotenv.config();
+const secretKey = process.env.JWT_SECRET;
+const expiresIn = Number(process.env.JWT_EXPIRATION);
 
 class UserController {
     static async createUser(req, res) {
@@ -30,15 +36,24 @@ class UserController {
             password,
             role,
         });
+
+       const user = {
+            id: newUser.id,
+            fullname: newUser.fullName,
+            email: newUser.email,
+            role: newUser.role,
+        }
+
+        const token = jwt.sign({
+            user,
+            expiresIn
+        },secretKey);
+
         return res.status(201).json({
             message: 'User Successfully created!!!',
-            user: {
-                id: newUser.id,
-                fullname: newUser.fullName,
-                email: newUser.email,
-                role: newUser.role,
-            },
+            user,
             status: 'success',
+            token
         });
     }
 
@@ -58,17 +73,28 @@ class UserController {
             });
         }
 
-        const match = await checkPassword( matchedUser.password);
+        const match = await Users.findOne({
+            where: { password: password },
+        });
         if (match) {
+
+            const user= {
+                id: matchedUser.id,
+                name: matchedUser.fullName,
+                email: matchedUser.email,
+                role: matchedUser.role,
+            }
+
+            const token = jwt.sign({
+                user,
+                expiresIn
+            },secretKey);
+
             return res.status(200).json({
                 message: 'User successfully signed in!!',
-                user: {
-                    id: matchedUser.id,
-                    name: matchedUser.fullName,
-                    email: matchedUser.email,
-                    role: matchedUser.role,
-                },
+               user,
                 status: 'success',
+                token
             });
         }
         error.password = 'You entered a wrong password!!';

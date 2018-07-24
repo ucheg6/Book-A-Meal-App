@@ -1,12 +1,12 @@
 import express from 'express';
-
+import auth from '../middleware/jwt';
 
 import MealController from '../controller/meals';
 
 
 const router = express.Router();
 
-router.get('/meals', MealController.getAllMeals);
+router.get('/meals', auth.authenticate, MealController.getAllMeals);
 
 router.post('/meal/new', MealController.addMeal);
 
