@@ -5,6 +5,14 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.STRING,
       allowNull:false,
     } ,
+    userId:{
+      type: DataTypes.INTEGER,
+      allowNull:false,
+    },
+    mealId:{
+      type: DataTypes.INTEGER,
+      allowNull:false,
+    },
     amount:{
       type:DataTypes.STRING,
       allowNull:false,
@@ -13,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.ENUM('delivered', 'cancelled', 'pending'),
       defaultValue: 'pending',
     },
+    
   }, {});
   Orders.associate = function(models) {
     // associations can be defined here
